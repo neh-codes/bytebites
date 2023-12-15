@@ -13,7 +13,7 @@ const RestaurantCard = (props) => {
           <div className='res-card-content' style={{marginLeft:"12px"}}>
               <h3>{name}</h3>
               <p>{cuisines.join(", ")}</p>
-              <p>{avgRating} stars</p>
+              <p>{avgRating} ⭐</p>
               <p>{areaName}</p>
           </div>
       </div>
