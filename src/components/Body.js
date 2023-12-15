@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import {useState, useEffect} from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from '../utilis/useOnlineStatus';
 
 
 const Body = () => {
@@ -28,12 +29,15 @@ const fetchData = async () =>{
       );
 }
 
-
+const onlineStatus = useOnlineStatus();
+if (onlineStatus === false) return(
+  <h1>You are offline</h1>
+);
 
     return listofRestaurants.length === 0 ?(
-      <Shimmer/>) :
-      (
+      <Shimmer/>) : (
       <div className='body'>
+        
         <div className="filter"> 
 
             <button className="filter-btn" onClick={()=>{
