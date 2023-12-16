@@ -2,22 +2,22 @@ import React from 'react'
 
 const Shimmer = () => {
   return (
-    <div className="shimmer-container">
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
-        <div className="shimmer-cards"></div>
+    <div className="flex flex-wrap p-2">
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
+        <div className="m-2 w-[190px] h-[400px] bg-slate-100 rounded"></div>
     </div>
   )
 }

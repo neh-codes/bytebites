@@ -14,7 +14,7 @@ const {name, cuisines, costForTwoMessage} = resInfo?.cards[0]?.card?.card?.info;
 const {itemCards} = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
   return (
-    <div>
+    <div className='p-2'>
         <h1>{name}</h1>
         <h3>{cuisines.join(", ")}</h3>
         <h4>{costForTwoMessage}</h4>

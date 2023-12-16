@@ -10,12 +10,12 @@ const Errors = () => {
   return (
     <div>
         <Header/>
-    <div className='errorContainer'>
-        <img className="error_img" src={ERROR_IMG}/>
+    <div className='flex flex-col items-center p-2'>
+        <img className="w-80" src={ERROR_IMG}/>
         <h1>We'll be back shortly</h1>
         <p>We are fixing a temporary glitch. Sorry for the inconvenience.</p>
         <p>{err.status} : {err.statusText}</p>
-       <Link to={"/"}> <button>Go Back Home</button></Link>
+       <Link to={"/"}> <button className='bg-gray-100 px-4 py-2 rounded-full'>Go Back Home</button></Link>
         
     </div>
     </div>

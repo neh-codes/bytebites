@@ -12,17 +12,17 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
  
   return (
-    <div className="header">
+    <div className="flex justify-between mb-2">
         <div className='logo-container'>
-        <Link to={"/"}>  <img className='logo-img' src={LOGO_URL}></img></Link>
+        <Link to={"/"}>  <img className="w-24" src={LOGO_URL}></img></Link>
         </div>
-        <div className='nav-items'>
-          <ul>
-            <li>Online Status : {onlineStatus ? "🟢" : "🔴"}</li>
-           <li> <Link to={"/"}>Home</Link></li>
-            <li><Link to={"/about"}>About</Link></li>
-            <li><Link to={"/contact"}>Contact</Link></li>
-            <li><button className="login" onClick={()=>{btnNameReact === "Login" ? setBtnNameReact("Logout") :setBtnNameReact("Login");}}>{btnNameReact}</button></li>
+        <div className='flex items-center'>
+          <ul className="flex p-4 m-4">
+            <li className="px-2">Online Status : {onlineStatus ? "🟢" : "🔴"}</li>
+           <li className="px-2"> <Link to={"/"}>Home</Link></li>
+            <li className="px-2"><Link to={"/about"}>About</Link></li>
+            <li className="px-2"><Link to={"/contact"}>Contact</Link></li>
+            <li className="px-2"><button className="login" onClick={()=>{btnNameReact === "Login" ? setBtnNameReact("Logout") :setBtnNameReact("Login");}}>{btnNameReact}</button></li>
           </ul>
         </div>
         

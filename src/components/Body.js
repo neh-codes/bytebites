@@ -40,21 +40,21 @@ if (onlineStatus === false) return(
         
         <div className="filter"> 
 
-            <button className="filter-btn" onClick={()=>{
+            <button className="filter-btn bg-gray-100 px-4 py-2 rounded-full mr-3" onClick={()=>{
             const filteredList = filteredListofRestaurants.filter(
               (res) => res.info.avgRating >= 4.5 )
               setfilteredListofRestaurants(filteredList);
             }}>Top rated Restaurants</button>
 
 
-            <input type="text" className="search-box" value={searchText} onChange={(e)=>{setsearchText(e.target.value)}}/>
-            <button onClick={() => {
+            <input type="text" className="search-box px-4 py-2 mx-2 rounded-full border-2 border-gray-100" value={searchText} onChange={(e)=>{setsearchText(e.target.value)}}/>
+            <button className="bg-gray-100 px-4 py-2 rounded-full" onClick={() => {
                 const filteredRestaurants = listofRestaurants.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                   setfilteredListofRestaurants(filteredRestaurants);
             }}>Search</button>
 
           </div>
-        <div className="res-container">
+        <div className="flex flex-wrap">
         {filteredListofRestaurants.map((restaurant) => (
             <Link key={restaurant.info.id} to={"/restaurants/"+ restaurant.info.id} style={{ textDecoration: 'none' }}><RestaurantCard resData={restaurant?.info} /></Link>
           ))}

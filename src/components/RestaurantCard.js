@@ -8,10 +8,10 @@ const RestaurantCard = (props) => {
   
   
     return(
-      <div className="res-card">
-          <img className="res-card-img" src={ CDN_URL +cloudinaryImageId}></img>
+      <div className="m-1 p-1 w-[209px] transition-[0.3s] ease-in hover:scale-95">
+          <img className="res-card-img rounded-[16px] shadow" src={ CDN_URL +cloudinaryImageId}></img>
           <div className='res-card-content' style={{marginLeft:"12px"}}>
-              <h3>{name}</h3>
+              <h3 className="font-bold pt-2">{name}</h3>
               <p>{cuisines.join(", ")}</p>
               <p>{avgRating} ⭐</p>
               <p>{areaName}</p>
