@@ -20,7 +20,6 @@ const {name, cuisines, costForTwoMessage, avgRating} = resInfo?.cards[0]?.card?.
 
 
 const categories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards.filter(c=> c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-console.log(categories);
 
 
 return (

@@ -3,6 +3,7 @@ import { LOGO_URL } from "../utilis/constants"
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utilis/useOnlineStatus";
 import UserContext from "../utilis/UserContext";
+import { useSelector } from "react-redux";
 
 
 
@@ -13,6 +14,10 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
  
   const {loggedInUser} = useContext(UserContext)
+  
+  const cartItems = useSelector((store)=> store.cart.items);
+
+
 
   return (
     <div className="flex justify-between mb-2 p-2">
@@ -25,6 +30,7 @@ const Header = () => {
            <li className="px-2"> <Link to={"/"}>Home</Link></li>
             <li className="px-2"><Link to={"/about"}>About</Link></li>
             <li className="px-2"><Link to={"/contact"}>Contact</Link></li>
+            <li className="px-2"><Link to={"/cart"}>Cart ({cartItems.length} items)</Link></li>
             <li className="px-2"><button className="login  bg-gray-100 px-4 py-1 -mt-1 rounded-full" onClick={()=>{btnNameReact === "Login" ? setBtnNameReact("Logout") :setBtnNameReact("Login");}}>{btnNameReact}</button></li>
             <li className="px-2">{loggedInUser}</li>
           </ul>
