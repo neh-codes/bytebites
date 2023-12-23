@@ -18,7 +18,7 @@ const ItemList = ({items}) =>{
     <div>
         <ul>
             {items.map(item => (
-            <div key={item.card.info.id} className="my-2 p-2 border-slate-200 border-b-2 flex justify-between">
+            <div data-testid="foodItems" key={item.card.info.id} className="my-2 p-2 border-slate-200 border-b-2 flex justify-between">
                 <div className="py-4 w-3/4">
                     <span>{item.card.info.name} - </span>
                     <span>₹{item.card.info.price/100 ? item.card.info.price/100 : item.card.info.defaultPrice/100}</span>

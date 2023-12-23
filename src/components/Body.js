@@ -53,7 +53,7 @@ const {loggedInUser, setUserName} = useContext(UserContext);
             }}>Top rated Restaurants</button>
 
 
-            <input type="text" className="search-box px-4 py-2 mx-2 rounded-full border-2 border-gray-100" value={searchText} onChange={(e)=>{setsearchText(e.target.value)}}/>
+            <input type="text" data-testid="searchInput" className="search-box px-4 py-2 mx-2 rounded-full border-2 border-gray-100" value={searchText} onChange={(e)=>{setsearchText(e.target.value)}}/>
             <button className="bg-gray-100 px-4 py-2 rounded-full" onClick={() => {
                 const filteredRestaurants = listofRestaurants.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                   setfilteredListofRestaurants(filteredRestaurants);
